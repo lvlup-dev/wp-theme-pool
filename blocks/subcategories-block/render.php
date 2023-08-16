@@ -46,9 +46,6 @@ function render_subcategories_block($attributes)
 	return $output;
 }
 
-
-
-// Enregistrer la fonction de rendu pour votre bloc
 register_block_type('lvlup-dev/subcategories-block', array(
 	'render_callback' => 'render_subcategories_block',
 ));
