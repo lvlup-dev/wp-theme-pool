@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lvlup-dev/subcategories-block",
+	"version": "0.1.0",
+	"title": "Subcategories Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Show subcategories of the current category",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "subcategories-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
