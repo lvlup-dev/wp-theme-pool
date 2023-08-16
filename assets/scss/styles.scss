@@ -2,6 +2,95 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-a {
-  @apply bg-blue-100;
+ul.breadcrumbs {
+  @apply text-gray-500;
+  @apply list-none;
+  @apply flex;
+  @apply items-center;
+  @apply gap-8;
+  @apply rounded-xl;
+  @apply bg-blue-50;
+  @apply p-4;
+
+  a {
+    @apply text-gray-600;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      @apply text-blue-900;
+    }
+  }
+}
+
+
+ul.subcategories-block {
+
+  @apply text-gray-500;
+  @apply list-none;
+  @apply flex;
+  @apply items-center;
+  @apply gap-8;
+  @apply rounded-xl;
+
+  @apply p-4;
+
+  li {
+
+  }
+
+  a {
+    @apply block;
+    @apply bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded inline-flex items-center;
+
+    &:hover {
+      @apply bg-blue-300;
+      @apply text-blue-900;
+    }
+  }
+}
+
+
+.wp-block-term-description {
+  @apply prose lg:prose-xl;
+  @apply text-gray-700;
+  @apply text-xl;
+}
+
+.category-long-description {
+  @apply prose;
+}
+
+h1 {
+  @apply text-5xl font-bold mt-12 mb-2;
+  color: #0a65a5;
+  @apply tracking-tighter;
+}
+
+.prose {
+  h2, h3, h4, p, img {
+    @apply mt-6 mb-8;
+  }
+
+  h2, h3, h4 {
+    @apply tracking-tight;
+  }
+}
+
+ul.wp-block-post-template {
+  @apply list-none;
+  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6;
+  @apply items-center;
+  @apply gap-8;
+  @apply rounded-xl;
+  @apply bg-blue-50;
+  @apply p-4;
+
+  a {
+    @apply text-gray-600;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      @apply text-blue-900;
+    }
+  }
 }

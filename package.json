@@ -19,9 +19,12 @@
   },
   "homepage": "https://github.com/lvlup-dev/wp-theme-pool#readme",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.28",
     "postcss-cli": "^10.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-nesting": "^12.0.1",
     "postcss-scss": "^4.0.7",
     "postcss-watch": "^0.1.1",
     "sass": "^1.65.1",

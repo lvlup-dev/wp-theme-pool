@@ -2,32 +2,49 @@
 
 function render_breadcrumbs_block($attributes)
 {
-	// Début des "breadcrumbs"
-	$breadcrumbs = '<div class="breadcrumbs">Breadcrumbs :';
+	$items = [];
 
-	// Home
-	$breadcrumbs .= '<a href="' . esc_url(home_url('/')) . '">Home</a>';
+	$items[] = [
+		'title' => 'Home',
+		'url' => esc_url(home_url('/')),
+	];
 
-	// Catégorie & Sous-catégorie
 	if (is_single() || is_category()) {
 		$categories = get_the_category();
 		if (!empty($categories)) {
-			$breadcrumbs .= ' &raquo; <a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
 
 			if ($categories[0]->parent) {
 				$parent_category = get_category($categories[0]->parent);
-				$breadcrumbs .= ' &raquo; <a href="' . esc_url(get_category_link($parent_category->term_id)) . '">' . esc_html($parent_category->name) . '</a>';
+				$items[] = [
+					'title' => $parent_category->name,
+					'url' => esc_url(get_category_link($parent_category->term_id)),
+				];
 			}
+
+			$items[] = [
+				'title' => $categories[0]->name,
+				'url' => esc_url(get_category_link($categories[0]->term_id)),
+			];
 		}
 	}
 
-	// Titre de l'article si on est sur un post
 	if (is_single()) {
-		$breadcrumbs .= ' &raquo; ' . esc_html(get_the_title());
+		$items[] = [
+			'title' => get_the_title(),
+			'url' => esc_url(get_permalink()),
+		];
 	}
 
-	// Fermeture des "breadcrumbs"
-	$breadcrumbs .= '</div>';
+	$render = '<ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">';
+	foreach ($items as $index => $item) {
+		$render .= '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+		$render .= '<a itemprop="item" href="' . $item['url'] . '">';
+		$render .= '<span itemprop="name">' . $item['title'] . '</span>';
+		$render .= '</a>';
+		$render .= '<meta itemprop="position" content="' . ($index + 1) . '" />';
+		$render .= '</li>';
+	}
+	$render .= '</ul>';
 
-	return $breadcrumbs;
+	return $render;
 }
