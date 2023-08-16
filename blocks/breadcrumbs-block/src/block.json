@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lvlup-dev/breadcrumbs-block",
+	"version": "0.1.0",
+	"title": "Breadcrumbs Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Show breadcrumbs with Category and SubCategory",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "breadcrumbs-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -12,8 +12,6 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps } from '@wordpress/block-editor';
-import { useSelect } from '@wordpress/data';
-import { useState, useEffect } from '@wordpress/element';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -31,39 +29,13 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( props ) {
-	const [ subcategories, setSubcategories ] = useState( [] );
-
-	// Récupérer la catégorie en cours.
-	const currentCategory = useSelect( ( select ) => {
-		const { getCurrentPost } = select( 'core/editor' );
-		const post = getCurrentPost();
-		if ( post && post.categories && post.categories.length > 0 ) {
-			return post.categories[ 0 ]; // considérons la première catégorie comme la catégorie principale
-		}
-		return null;
-	}, [] );
-
-	useEffect( () => {
-		if ( currentCategory ) {
-			fetch( `/wp-json/wp/v2/categories?parent=${ currentCategory }` )
-				.then( response => response.json() )
-				.then( data => {
-					setSubcategories( data );
-				} );
-		}
-	}, [ currentCategory ] );
-
+export default function Edit() {
 	return (
-		<div { ...props }>
-			<div>Sous-catégories :</div>
-			<ul>
-				{ subcategories.map( cat => (
-					<li key={ cat.id }>
-						<a href={ cat.link }>{ cat.name }</a>
-					</li>
-				) ) }
-			</ul>
-		</div>
+		<p { ...useBlockProps() }>
+			{ __(
+				'Breadcrumbs Block – hello from the editor!',
+				'breadcrumbs-block'
+			) }
+		</p>
 	);
 }
