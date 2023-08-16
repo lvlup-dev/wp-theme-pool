@@ -1,5 +1,13 @@
 <?php
 
+// styles
+function enqueue_theme_styles() {
+    wp_enqueue_style('theme-styles', get_template_directory_uri() . '/style.css', [], '1.0.0');
+}
+add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
+
+
+// blocks
 require get_template_directory() . '/blocks/subcategories-block/render.php';
 require get_template_directory() . '/blocks/breadcrumbs-block/render.php';
 

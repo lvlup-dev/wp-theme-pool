@@ -1,0 +1,30 @@
+{
+  "name": "poolblog",
+  "version": "1.0.0",
+  "description": "=== Pool Blog === Contributors: DSampaolo Requires at least: 6.0 Tested up to: 6.3 Requires PHP: 5.7 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss assets/scss/styles.scss -o style.css",
+    "watch:css": "postcss assets/scss/styles.scss -o style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvlup-dev/wp-theme-pool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvlup-dev/wp-theme-pool/issues"
+  },
+  "homepage": "https://github.com/lvlup-dev/wp-theme-pool#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "postcss-cli": "^10.1.0",
+    "postcss-scss": "^4.0.7",
+    "postcss-watch": "^0.1.1",
+    "sass": "^1.65.1",
+    "tailwindcss": "^3.3.3"
+  }
+}
