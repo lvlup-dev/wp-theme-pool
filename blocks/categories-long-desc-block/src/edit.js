@@ -33,8 +33,8 @@ export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
 			{ __(
-				'Breadcrumbs Block',
-				'breadcrumbs-block'
+				'Category Long Description',
+				'categories-long-desc-block'
 			) }
 		</p>
 	);

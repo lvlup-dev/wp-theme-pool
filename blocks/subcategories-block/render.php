@@ -45,7 +45,3 @@ function render_subcategories_block($attributes)
 
 	return $output;
 }
-
-register_block_type('lvlup-dev/subcategories-block', array(
-	'render_callback' => 'render_subcategories_block',
-));

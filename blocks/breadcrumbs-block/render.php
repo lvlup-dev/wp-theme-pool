@@ -31,7 +31,3 @@ function render_breadcrumbs_block($attributes)
 
 	return $breadcrumbs;
 }
-
-register_block_type('lvlup-dev/breadcrumbs-block', array(
-	'render_callback' => 'render_breadcrumbs_block',
-));
