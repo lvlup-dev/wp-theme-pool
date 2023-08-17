@@ -78,7 +78,7 @@ h1 {
 
 ul.wp-block-post-template {
   @apply list-none;
-  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
   @apply items-center;
   @apply gap-8;
   @apply rounded-xl;
@@ -93,4 +93,9 @@ ul.wp-block-post-template {
       @apply text-blue-900;
     }
   }
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+  @apply bg-gray-200;
 }

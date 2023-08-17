@@ -1607,13 +1607,13 @@ ul.wp-block-post-template {
 @media (min-width: 768px) {
 
   ul.wp-block-post-template {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 1024px) {
 
   ul.wp-block-post-template {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 ul.wp-block-post-template {
@@ -1632,4 +1632,11 @@ ul.wp-block-post-template a {
 ul.wp-block-post-template a:hover {
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity));
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
