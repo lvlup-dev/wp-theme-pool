@@ -1644,7 +1644,6 @@ ul.subcategories-block {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
   list-style-type: none;
-  align-items: center;
   gap: 2rem;
   border-radius: 0.75rem;
 }
@@ -1671,12 +1670,8 @@ ul.subcategories-block img {
 ul.subcategories-block a {
   display: block;
   width: 100%;
-  text-align: center;
   display: inline-flex;
   align-items: center;
-  border-radius: 0.25rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;

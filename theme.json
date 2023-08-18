@@ -92,11 +92,6 @@
 	},
 	"styles": {
 		"blocks": {
-			"core/column": {
-				"color": {
-					"background": "#7bdbd82e"
-				}
-			},
 			"core/group": {
 				"spacing": {
 					"padding": {
