@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-ul.breadcrumbs {
+ul#breadcrumbs {
   @apply text-gray-500;
   @apply list-none;
   @apply flex;
@@ -11,39 +11,13 @@ ul.breadcrumbs {
   @apply rounded-xl;
   @apply bg-blue-50;
   @apply p-4;
+  @apply mx-0;
 
   a {
     @apply text-gray-600;
     transition: color 0.2s ease-in-out;
 
     &:hover {
-      @apply text-blue-900;
-    }
-  }
-}
-
-
-ul.subcategories-block {
-
-  @apply text-gray-500;
-  @apply list-none;
-  @apply flex;
-  @apply items-center;
-  @apply gap-8;
-  @apply rounded-xl;
-
-  @apply p-4;
-
-  li {
-
-  }
-
-  a {
-    @apply block;
-    @apply bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded inline-flex items-center;
-
-    &:hover {
-      @apply bg-blue-300;
       @apply text-blue-900;
     }
   }
@@ -97,5 +71,59 @@ ul.wp-block-post-template {
 
 .container {
   @apply max-w-7xl mx-auto;
-  @apply bg-gray-200;
+}
+
+ul.subcategories-block {
+
+  @apply w-full;
+  @apply text-gray-500;
+  @apply list-none;
+  @apply items-center;
+  @apply gap-8;
+  @apply rounded-xl;
+  @apply space-y-8;
+
+  li {
+    @apply shadow;
+    @apply flex;
+    @apply rounded-xl;
+  }
+
+  @apply p-8;
+
+  img {
+    @apply rounded-l-xl;
+    @apply w-32;
+  }
+
+  a {
+    @apply block w-full text-center;
+    @apply bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded inline-flex items-center;
+    @apply rounded-r-xl;
+
+    &:hover {
+      @apply bg-blue-300;
+      @apply text-blue-900;
+    }
+  }
+}
+
+header {
+  .wp-block-group {
+    @apply py-0 my-0;
+  }
+
+  div {
+    @apply py-0 my-0;
+  }
+
+  .header-main {
+    @apply py-8;
+  }
+}
+
+aside {
+  &.wp-block-group {
+    @apply py-0 my-0;
+  }
 }

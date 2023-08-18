@@ -13,7 +13,7 @@ function register_custom_blocks()
     ];
 
     foreach ($blocks as $block_name => $block_render_callback) {
-        register_block_type_from_metadata(__DIR__ . '/blocks/' . $block_name . '/build', [
+        register_block_type_from_metadata(__DIR__ . '/../blocks/' . $block_name . '/build', [
             'render_callback' => $block_render_callback
         ]);
     }

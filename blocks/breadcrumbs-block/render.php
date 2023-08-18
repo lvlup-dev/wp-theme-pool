@@ -35,7 +35,7 @@ function render_breadcrumbs_block($attributes)
 		];
 	}
 
-	$render = '<ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">';
+	$render = '<ul id="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">';
 	foreach ($items as $index => $item) {
 		$render .= '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
 		$render .= '<a itemprop="item" href="' . $item['url'] . '">';
