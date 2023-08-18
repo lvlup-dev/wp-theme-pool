@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lvlup-dev/related-posts-by-common-tags",
+	"version": "0.1.0",
+	"title": "Related Posts By Common Tags",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Shows related posts according to common tags.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "related-posts-by-common-tags",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

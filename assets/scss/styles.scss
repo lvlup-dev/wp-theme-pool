@@ -126,3 +126,23 @@ aside {
     @apply py-0 my-0;
   }
 }
+
+.related-posts-block {
+  @apply mt-8;
+  @apply list-none;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+  @apply items-center;
+  @apply gap-8;
+  @apply rounded-xl;
+  @apply bg-blue-50;
+  @apply p-4;
+
+  a {
+    @apply text-gray-600;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      @apply text-blue-900;
+    }
+  }
+}
