@@ -1,5 +1,4 @@
 <?php
-
 function render_breadcrumbs_block($attributes)
 {
 	$items = [];
@@ -9,10 +8,26 @@ function render_breadcrumbs_block($attributes)
 		'url' => esc_url(home_url('/')),
 	];
 
-	if (is_single() || is_category()) {
-		$categories = get_the_category();
-		if (!empty($categories)) {
+	if (is_category()) {
+		$current_category = get_queried_object();
 
+		if ($current_category->parent) {
+			$parent_category = get_category($current_category->parent);
+			$items[] = [
+				'title' => $parent_category->name,
+				'url' => esc_url(get_category_link($parent_category->term_id)),
+			];
+		}
+
+		$items[] = [
+			'title' => $current_category->name,
+			'url' => esc_url(get_category_link($current_category->term_id)),
+		];
+
+	} elseif (is_single()) {
+		$categories = get_the_category();
+
+		if (!empty($categories)) {
 			if ($categories[0]->parent) {
 				$parent_category = get_category($categories[0]->parent);
 				$items[] = [
@@ -26,9 +41,7 @@ function render_breadcrumbs_block($attributes)
 				'url' => esc_url(get_category_link($categories[0]->term_id)),
 			];
 		}
-	}
 
-	if (is_single()) {
 		$items[] = [
 			'title' => get_the_title(),
 			'url' => esc_url(get_permalink()),
