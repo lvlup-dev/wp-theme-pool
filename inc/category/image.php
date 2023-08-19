@@ -68,3 +68,15 @@ function save_category_image($term_id)
 
 add_action('create_category', 'save_category_image');
 add_action('edit_category', 'save_category_image');
+
+function register_category_image()
+{
+    register_meta('term', 'category_image_id', array(
+        'show_in_rest' => true,
+        'type' => 'integer',
+        'single' => true,
+        'sanitize_callback' => 'absint',
+    ));
+}
+
+add_action('init', 'register_category_image');

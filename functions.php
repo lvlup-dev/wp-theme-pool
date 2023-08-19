@@ -11,3 +11,4 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
 require "inc/blocks.php";
 require "inc/category/image.php";
 require "inc/category/descriptions.php";
+

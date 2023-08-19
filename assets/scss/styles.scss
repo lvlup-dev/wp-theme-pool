@@ -79,26 +79,20 @@ ul.subcategories-block {
   @apply text-gray-500;
   @apply list-none;
   @apply gap-8;
-  @apply rounded-xl;
-  @apply space-y-8;
+  @apply space-y-6;
 
   li {
     @apply shadow;
     @apply flex;
-    @apply rounded-xl;
   }
 
-  @apply p-8;
-
   img {
-    @apply rounded-l-xl;
     @apply w-32;
   }
 
   a {
     @apply block w-full;
     @apply text-blue-800 font-bold py-2 px-4 inline-flex items-center;
-    @apply rounded-r-xl;
 
     &:hover {
       @apply bg-blue-300;

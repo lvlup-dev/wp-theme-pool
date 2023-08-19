@@ -2022,26 +2022,19 @@ ul.subcategories-block {
   color: rgb(107 114 128 / var(--tw-text-opacity));
   list-style-type: none;
   gap: 2rem;
-  border-radius: 0.75rem;
 }
 ul.subcategories-block > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-ul.subcategories-block {
-  padding: 2rem;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 ul.subcategories-block li {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   display: flex;
-  border-radius: 0.75rem;
 }
 ul.subcategories-block img {
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
   width: 8rem;
 }
 ul.subcategories-block a {
@@ -2056,8 +2049,6 @@ ul.subcategories-block a {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
 }
 ul.subcategories-block a:hover {
   --tw-bg-opacity: 1;

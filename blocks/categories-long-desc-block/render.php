@@ -9,7 +9,7 @@ function render_categories_long_desc_block($attributes) {
 	}
 
 	// Récupérez la description longue à partir des métadonnées du terme
-	$long_desc = get_term_meta($current_cat->term_id, 'term_content', true);
+	$long_desc = get_term_meta($current_cat->term_id, 'content', true);
 
 	// Si la description longue est vide, retournez une chaîne vide
 	if (!$long_desc) {
@@ -17,5 +17,5 @@ function render_categories_long_desc_block($attributes) {
 	}
 
 	// Retournez la description longue enveloppée dans un div (ou un autre élément de votre choix)
-	return '<div class="category-long-description">' . wp_kses_post($long_desc) . '</div>';
+	return '<div class="category-long-description">' . $long_desc . '</div>';
 }

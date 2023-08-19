@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "lvlup-dev/category-image",
+  "version": "0.1.0",
+  "title": "Category Image",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Shows the Featured Image for Categories.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "category-image",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
