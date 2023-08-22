@@ -2162,6 +2162,13 @@ header .header-main {
 .related-posts-block li a img {
   width: 4rem;
 }
+.info-column {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  padding: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
 .wp-block-post-author-name {
   position: relative;
   padding-left: 2rem;

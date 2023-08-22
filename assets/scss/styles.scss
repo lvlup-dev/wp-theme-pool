@@ -101,6 +101,10 @@ header {
   }
 }
 
+.info-column {
+  @apply bg-gray-200 text-gray-800 p-4;
+}
+
 .wp-block-post-author-name {
   @apply relative pl-8;
 
