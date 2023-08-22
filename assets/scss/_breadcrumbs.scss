@@ -1,0 +1,38 @@
+
+ul#breadcrumbs {
+  @apply bg-cyan-900;
+  @apply text-gray-500;
+  @apply list-none;
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+  @apply rounded-xl;
+  @apply p-4;
+  @apply mx-0 my-0;
+  @apply w-full;
+  @apply text-sm;
+  @apply shadow;
+
+  li {
+    @apply flex items-center;
+  }
+
+  li:not(:first-child)::before {
+    content: "/";
+    font-weight: 500;
+    @apply pr-2;
+    display: inline-block;
+  }
+
+  a {
+    @apply text-gray-100;
+    @apply font-normal;
+    @apply tracking-tight;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      @apply text-amber-500;
+    }
+
+  }
+}
