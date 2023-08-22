@@ -49,15 +49,10 @@ function render_subcategories_block($attributes)
 		return '';
 	}
 
-	// Construire le rendu
 	$render = '<ul class="subcategories-block">';
 	foreach ($sibling_categories as $category) {
-		$image_id = get_term_meta($category->term_id, 'category_image_id', true);
-		$image_url = $image_id ? wp_get_attachment_image_url($image_id, 'medium') : '';
-		$render .= '<li>';
-		if ($image_url) {
-			$render .= '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($category->name) . '">';
-		}
+		$isActive = ($category->term_id == $term_id) ? ' active' : ''; // Check if the category is the current one
+		$render .= '<li class="subcategory' . $isActive . '">'; // Use the $isActive variable here
 		$render .= '<a href="' . esc_url(get_term_link($category)) . '">' . esc_html($category->name) . '</a>';
 		$render .= '</li>';
 	}

@@ -79,25 +79,39 @@ ul.subcategories-block {
   @apply text-gray-500;
   @apply list-none;
   @apply gap-8;
-  @apply space-y-6;
+  @apply p-8;
+  @apply space-y-2;
 
   li {
-    @apply shadow;
-    @apply flex;
+    @apply relative pl-5;
+
+    &::before {
+      content: '';
+      @apply absolute top-1/2 left-0 w-2 h-2 bg-amber-500 rounded-full;
+      transform: translateY(-50%);
+    }
   }
 
+
   img {
-    @apply w-32;
+    @apply h-8 w-12;
   }
 
   a {
     @apply block w-full;
-    @apply text-blue-800 font-bold py-2 px-4 inline-flex items-center;
+
+    @apply text-blue-900;
+    @apply font-light;
+    @apply tracking-tight;
+    transition: color 0.2s ease-in-out;
 
     &:hover {
-      @apply bg-blue-300;
-      @apply text-blue-900;
+      @apply text-amber-700;
     }
+  }
+
+  li.active a {
+    @apply font-bold;
   }
 }
 
@@ -116,6 +130,10 @@ header {
 }
 
 aside {
+  @apply bg-cyan-100;
+  @apply rounded-xl;
+  @apply shadow;
+
   &.wp-block-group {
     @apply py-0 my-0;
   }
@@ -138,5 +156,31 @@ aside {
     &:hover {
       @apply text-blue-900;
     }
+  }
+}
+
+.wp-block-post-author-name {
+  @apply relative pl-8;
+
+  &::before {
+    content: '\f007';
+    @apply absolute left-0 top-1/2 -translate-y-1/2;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1rem;
+    @apply text-gray-500;
+  }
+}
+
+.wp-block-post-date {
+  @apply relative pl-8;
+
+  &::before {
+    content: '\f133';
+    @apply absolute left-0 top-1/2 -translate-y-1/2;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1rem;
+    @apply text-gray-500;
   }
 }

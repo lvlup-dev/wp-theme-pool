@@ -12,3 +12,8 @@ require "inc/blocks.php";
 require "inc/category/image.php";
 require "inc/category/descriptions.php";
 
+function enqueue_font_awesome() {
+    $version = "6.4.2";
+    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/fontawesome-free-'.$version.'-web/css/all.min.css', array(), $version );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );

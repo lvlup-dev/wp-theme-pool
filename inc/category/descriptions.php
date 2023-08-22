@@ -70,7 +70,7 @@ function register_category_meta()
         'show_in_rest' => true,
         'type' => 'string',
         'single' => true,
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'wp_kses_post',
     ));
 }
 
