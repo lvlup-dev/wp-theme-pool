@@ -36,7 +36,6 @@ ul.wp-block-post-template {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
   @apply items-center;
   @apply gap-8;
-  @apply rounded-xl;
   @apply bg-blue-50;
   @apply p-4;
 
@@ -54,12 +53,13 @@ ul.wp-block-post-template {
   @apply max-w-7xl mx-auto;
 }
 
+.wp-block-group {
+  @apply py-0 my-0;
+}
+
 header {
   @apply bg-cyan-900;
 
-  .wp-block-group {
-    @apply py-0 my-0;
-  }
 
   div {
     @apply py-0 my-0;
@@ -73,19 +73,30 @@ header {
 .related-posts-block {
   @apply mt-8;
   @apply list-none;
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
   @apply items-center;
   @apply gap-8;
-  @apply rounded-xl;
-  @apply bg-blue-50;
-  @apply p-4;
+  @apply border border-cyan-900 shadow;
+  @apply divide-y divide-cyan-900;
 
-  a {
-    @apply text-gray-600;
-    transition: color 0.2s ease-in-out;
+  li {
+    @apply p-4;
 
-    &:hover {
-      @apply text-blue-900;
+    a {
+      @apply block p-4;
+      @apply bg-white;
+      @apply text-gray-600;
+      @apply flex gap-8;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        @apply text-amber-500;
+      }
+
+      img {
+        @apply w-16;
+      }
+
+      @apply hover:text-amber-500;
     }
   }
 }
@@ -123,7 +134,6 @@ header {
 .wp-post-image, .category-image-block img {
   @apply w-full;
   @apply h-auto;
-  @apply rounded-xl;
   @apply shadow;
 }
 

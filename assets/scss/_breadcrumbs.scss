@@ -1,17 +1,19 @@
+.breadcrumbs-group {
+  @apply bg-cyan-600;
+  @apply pt-0 mt-0;
+  @apply mb-8;
+}
 
 ul#breadcrumbs {
-  @apply bg-cyan-900;
-  @apply text-gray-500;
+  @apply block;
+  @apply text-gray-200;
   @apply list-none;
   @apply flex;
   @apply items-center;
   @apply gap-2;
-  @apply rounded-xl;
   @apply p-4;
-  @apply mx-0 my-0;
-  @apply w-full;
+  @apply mx-8 my-0;
   @apply text-sm;
-  @apply shadow;
 
   li {
     @apply flex items-center;
@@ -33,6 +35,5 @@ ul#breadcrumbs {
     &:hover {
       @apply text-amber-500;
     }
-
   }
 }
