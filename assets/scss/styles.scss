@@ -155,3 +155,18 @@ header {
 .wp-block-template-part {
   @apply my-0;
 }
+
+nav.menu-primary {
+  @apply border-t border-cyan-700;
+
+  ul {
+    @apply my-4;
+    @apply flex gap-8;
+
+    li {
+      @apply uppercase;
+      @apply text-gray-200;
+      @apply font-semibold;
+    }
+  }
+}

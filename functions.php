@@ -17,3 +17,12 @@ function enqueue_font_awesome() {
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/fontawesome-free-'.$version.'-web/css/all.min.css', array(), $version );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+
+function register_my_theme_menus() {
+    register_nav_menus(
+        array(
+            'primary' => __( 'Primary Menu', 'textdomain' ),
+        )
+    );
+}
+add_action( 'after_setup_theme', 'register_my_theme_menus' );

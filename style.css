@@ -2230,3 +2230,20 @@ header .header-main {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+nav.menu-primary {
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(14 116 144 / var(--tw-border-opacity));
+}
+nav.menu-primary ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+nav.menu-primary ul li {
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+  font-weight: 600;
+}
