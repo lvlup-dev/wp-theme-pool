@@ -9,11 +9,19 @@ function add_category_content_field()
 
 add_action('category_add_form_fields', 'add_category_content_field', 10, 2);
 
-// Ajouter l'éditeur WYSIWYG à la page d'édition de catégorie
 function edit_category_content_field($term)
 {
-    $content = get_term_meta($term->term_id, 'content', true);
-    wp_editor($content, 'content', array('media_buttons' => true));
+    ?>
+    <tr class="form-field">
+        <th scope="row" valign="top"><label for="champ_personnalise">Description longue</label></th>
+        <td>
+            <?php $content = get_term_meta($term->term_id, 'content', true);
+            wp_editor($content, 'content', array('media_buttons' => true));
+            ?>
+            <p class="description">La description longue n’est pas visible par défaut ; cependant, certains thèmes peuvent l’afficher.</p>
+        </td>
+    </tr>
+    <?php
 }
 
 add_action('category_edit_form_fields', 'edit_category_content_field', 10, 2);

@@ -17,7 +17,7 @@ function category_image_meta()
     <?php
 }
 
-add_action('category_add_form_fields', 'category_image_meta');
+add_action('category_add_form_fields', 'category_image_meta', 20);
 
 function edit_category_image_meta($term)
 {
@@ -45,7 +45,7 @@ function edit_category_image_meta($term)
     <?php
 }
 
-add_action('category_edit_form_fields', 'edit_category_image_meta');
+add_action('category_edit_form_fields', 'edit_category_image_meta', 20);
 
 function category_image_scripts($hook)
 {
