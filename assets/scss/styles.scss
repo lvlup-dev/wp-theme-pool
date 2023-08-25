@@ -170,3 +170,31 @@ nav.menu-primary {
     }
   }
 }
+
+footer {
+  @apply bg-cyan-900;
+  @apply text-gray-200;
+
+  .footer-categories-container {
+    @apply mt-8 pt-8;
+    @apply max-w-7xl mx-auto;
+    @apply flex gap-8;
+    flex-wrap: wrap;
+
+    .footer-category {
+      flex: 1 1 auto;
+
+      a {
+        @apply block mb-2;
+        @apply font-bold;
+        @apply text-gray-100 hover:text-amber-500;
+        transition: color 0.2s ease-in-out;
+      }
+
+      ul li a {
+        @apply font-normal tracking-tight;
+        @apply mb-0;
+      }
+    }
+  }
+}
