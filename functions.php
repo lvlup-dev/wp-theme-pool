@@ -26,3 +26,8 @@ function register_my_theme_menus() {
     );
 }
 add_action( 'after_setup_theme', 'register_my_theme_menus' );
+
+function custom_image_sizes() {
+    add_image_size('custom-category', 320, 180, true);  // 320 pixels wide by 180 pixels tall, hard crop mode
+}
+add_action('after_setup_theme', 'custom_image_sizes');

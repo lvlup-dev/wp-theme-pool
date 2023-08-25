@@ -6,6 +6,7 @@ require get_template_directory() . '/blocks/categories-long-desc-block/render.ph
 require get_template_directory() . '/blocks/related-posts-by-common-tags/render.php';
 require get_template_directory() . '/blocks/category-image/render.php';
 require get_template_directory() . '/blocks/footer-categories/render.php';
+require get_template_directory() . '/blocks/home-posts-by-categories/render.php';
 
 function register_custom_blocks()
 {
@@ -16,6 +17,7 @@ function register_custom_blocks()
         'related-posts-by-common-tags' => 'render_related_posts_by_common_tags_block',
         'category-image' => 'render_category_image_block',
         'footer-categories' => 'render_footer_categories_block',
+        'home-posts-by-categories' => 'render_home_posts_by_categories_block',
     ];
 
     foreach ($blocks as $block_name => $block_render_callback) {
